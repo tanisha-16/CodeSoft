@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 20px; /* Rounded-corner square */
+    }
+
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill, .project {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      flex: 1 1 200px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tanisha Singh</h1>
+    <p>Web Developer | Designer | Learner</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="Screenshot 2025-07-27 150307.png" alt="Your Photo" class="profile"/>
+    <p>Hello! I am a passionate web developer with a strong interest in building clean, responsive, and user-friendly websites. I enjoy learning new technologies and continuously improving my skills.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Cloud</div>
+      <div class="skill">Communication</div>
+      <div class="skill">Adaptability</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio built with HTML and CSS.</p>
+        <img src="Screenshot 2025-07-27 150506.png" alt="Portfolio Website" width="100%">
+      </div>
+      <div class="project">
+        <h3>Multi-Website Hosting on Linux Server</h3>
+        <p>Configured a single Linux server (using Apache) to host multiple websites.</p>
+        <img src="Screenshot 2025-07-27 144839.png" alt="Linux Hosting Project" width="100%">
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can download my resume by clicking the button below.</p>
+    <a href="your-resume.pdf" class="button" download>Download Resume</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: tanishasingh1613@gmail.com</p>
+    <p>Phone: +91-12345-67890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tanisha. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
