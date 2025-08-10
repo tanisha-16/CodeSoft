@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+        }
+        .display {
+            background: #222;
+            color: white;
+            font-size: 2em;
+            padding: 20px;
+            text-align: right;
+            overflow: hidden;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        button {
+            padding: 20px;
+            font-size: 1.2em;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #e0e0e0;
+        }
+        .operator {
+            background: #928675;
+            color: white;
+        }
+        .operator:hover {
+            background: #ec971f;
+        }
+        .equal {
+            background: #5cb85c;
+            color: white;
+        }
+        .equal:hover {
+            background: #4cae4c;
+        }
+        .clear {
+            background: #d9534f;
+            color: white;
+        }
+        .clear:hover {
+            background: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" id="clear">C</button>
+            <button>/</button>
+            <button>*</button>
+            <button class="operator">-</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">+</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>.</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="equal" id="equal">=</button>
+
+            <button style="grid-column: span 4;">0</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+        const buttons = document.querySelectorAll("button");
+        let currentInput = "";
+
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const value = button.textContent;
+
+                if (value === "C") {
+                    currentInput = "";
+                    display.textContent = "0";
+                }
+                else if (value === "=") {
+                    try {
+                        display.textContent = eval(currentInput);
+                        currentInput = display.textContent;
+                    } catch {
+                        display.textContent = "Error";
+                        currentInput = "";
+                    }
+                }
+                else {
+                    currentInput += value;
+                    display.textContent = currentInput;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
